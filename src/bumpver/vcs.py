@@ -105,9 +105,6 @@ class VCSAPI:
     @property
     def is_usable(self) -> bool:
         """Detect availability of subcommand."""
-        if not os.path.exists(f".{self.name}"):
-            return False
-
         cmd = self.subcommands['is_usable'].split()
 
         try:
